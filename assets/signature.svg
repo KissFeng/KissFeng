@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="sig-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <style>
+    .sig-text {
+      font-family: 'Brush Script MT', 'Segoe Script', 'Snell Roundhand', cursive, sans-serif;
+      font-size: 38px;
+      font-weight: normal;
+      font-style: italic;
+      fill: url(#sig-glow);
+    }
+    .sig-sub {
+      font-family: 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 11px;
+      fill: #64748b;
+      letter-spacing: 2px;
+    }
+  </style>
+  <g transform="translate(10, 42)">
+    <text x="0" y="0" class="sig-text">KissFeng</text>
+    <text x="5" y="24" class="sig-sub">// STAY CURIOUS &amp; SHIP CODE</text>
+  </g>
+</svg>
