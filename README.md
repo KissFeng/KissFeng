@@ -48,7 +48,7 @@
 * **终端仿真管道**：基于 `node-pty` 与 `@xterm/xterm`（WebGL 硬件加速）构建高保真双向伪终端流，单架构多端交付 Web 与 Electron 桌面端。
 
 #### 📖 [Jie's Notes (个人公开知识库)](https://notes.power8.top/) ｜ [Source](https://github.com/KissFeng/Jie-s-Notes)
-> **持续生长的个人数字花园 (Open Digital Garden & Technical Codex)**
+> **持续沉淀的公开数字花园 (Open Digital Garden & Technical Codex)**
 * 基于 VitePress 搭建的现代化体系化知识库，沉淀关于 AI Agent 上下文工程、分布式系统高可用、底层内核技术与系统设计的实战思考。
 
 #### 🛡️ [Scene-Port-Hider-by-eBPF](https://github.com/KissFeng/Scene-Port-Hider-by-eBPF)
@@ -57,14 +57,15 @@
 
 ---
 
-### ⚡ 核心技术栈 (Core Technologies)
+### 💫 专业技能矩阵 (Tech Stack & Tools)
 
-```text
-  Autonomous Agents  │ LangGraph · Claude Agent SDK · MCP Protocol · Hybrid RAG · Qdrant
-  Systems & Backend  │ Python (FastAPI) · Java (Spring Boot) · Linux / eBPF · Redis · MySQL · RabbitMQ
-  Frontend & Desktop │ React 19 · TypeScript · Next.js · Electron · Tailwind CSS · Vite
-  Infrastructure     │ Docker · Nginx · Linux System Engineering · GitHub Actions CI/CD
-```
+| 领域 (Domain) | 技术栈与工具生态 (Skills & Frameworks) |
+| :--- | :--- |
+| **AI & Agent Core** | ![][ai-langgraph] ![][ai-claude] ![][ai-mcp] ![][ai-qdrant] ![][ai-pytorch] ![][ai-openai] ![][ai-huggingface] |
+| **Backend & System** | ![][backend-python] ![][backend-fastapi] ![][backend-java] ![][backend-spring] ![][backend-mysql] ![][backend-redis] ![][backend-rabbitmq] |
+| **Frontend & Workbench** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-vue] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
+| **DevOps & Infra** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
+| **Workflow & IDE** | ![][tool-cursor] ![][tool-vscode] ![][tool-git] ![][tool-postman] ![][tool-macos] |
 
 ---
 
@@ -99,5 +100,42 @@
 ---
 
 <div align="right">
-  <img src="./assets/signature.svg" alt="KissFeng Signature" width="260px" />
+  <img src="./assets/signature.svg" alt="KissFeng Signature" width="280px" />
 </div>
+
+<!-- SHIELD BADGE DEFINITIONS -->
+[ai-langgraph]: https://img.shields.io/badge/LangGraph-000?style=flat-square&logoColor=38bdf8&logo=diagram-next
+[ai-claude]: https://img.shields.io/badge/Claude_Agent_SDK-000?style=flat-square&logoColor=d97706&logo=anthropic
+[ai-mcp]: https://img.shields.io/badge/MCP_Protocol-000?style=flat-square&logoColor=38bdf8&logo=connectdevelop
+[ai-qdrant]: https://img.shields.io/badge/Qdrant_VectorDB-000?style=flat-square&logoColor=ef4444&logo=databricks
+[ai-pytorch]: https://img.shields.io/badge/PyTorch-000?style=flat-square&logoColor=ee4c2c&logo=pytorch
+[ai-openai]: https://img.shields.io/badge/OpenAI_API-000?style=flat-square&logoColor=white&logo=openai
+[ai-huggingface]: https://img.shields.io/badge/HuggingFace-000?style=flat-square&logoColor=yellow&logo=huggingface
+
+[backend-python]: https://img.shields.io/badge/Python-000?style=flat-square&logoColor=white&logo=python
+[backend-fastapi]: https://img.shields.io/badge/FastAPI-000?style=flat-square&logoColor=059669&logo=fastapi
+[backend-java]: https://img.shields.io/badge/Java_17%2B-000?style=flat-square&logoColor=white&logo=openjdk
+[backend-spring]: https://img.shields.io/badge/Spring_Boot_3-000?style=flat-square&logoColor=6db33f&logo=springboot
+[backend-mysql]: https://img.shields.io/badge/MySQL-000?style=flat-square&logoColor=white&logo=mysql
+[backend-redis]: https://img.shields.io/badge/Redis-000?style=flat-square&logoColor=dc2626&logo=redis
+[backend-rabbitmq]: https://img.shields.io/badge/RabbitMQ-000?style=flat-square&logoColor=ff6600&logo=rabbitmq
+
+[frontend-react]: https://img.shields.io/badge/React_19-000?style=flat-square&logoColor=61dafb&logo=react
+[frontend-nextjs]: https://img.shields.io/badge/Next.js-000?style=flat-square&logoColor=white&logo=nextdotjs
+[frontend-ts]: https://img.shields.io/badge/TypeScript-000?style=flat-square&logoColor=3178c6&logo=typescript
+[frontend-vue]: !https://img.shields.io/badge/Vue.js_3-000?style=flat-square&logoColor=42b883&logo=vuedotjs
+[frontend-tailwind]: https://img.shields.io/badge/TailwindCSS-000?style=flat-square&logoColor=38bdf8&logo=tailwindcss
+[frontend-electron]: https://img.shields.io/badge/Electron-000?style=flat-square&logoColor=47848f&logo=electron
+[frontend-vite]: https://img.shields.io/badge/Vite-000?style=flat-square&logoColor=646cff&logo=vite
+
+[ops-docker]: https://img.shields.io/badge/Docker-000?style=flat-square&logoColor=2496ed&logo=docker
+[ops-linux]: https://img.shields.io/badge/Linux-000?style=flat-square&logoColor=white&logo=linux
+[ops-nginx]: https://img.shields.io/badge/Nginx-000?style=flat-square&logoColor=009639&logo=nginx
+[ops-actions]: https://img.shields.io/badge/GitHub_Actions-000?style=flat-square&logoColor=white&logo=githubactions
+[ops-vercel]: https://img.shields.io/badge/Vercel-000?style=flat-square&logoColor=white&logo=vercel
+
+[tool-cursor]: https://img.shields.io/badge/Cursor_IDE-000?style=flat-square&logoColor=white&logo=cursor
+[tool-vscode]: https://img.shields.io/badge/VS_Code-000?style=flat-square&logoColor=007acc&logo=visualstudiocode
+[tool-git]: https://img.shields.io/badge/Git-000?style=flat-square&logoColor=f05032&logo=git
+[tool-postman]: https://img.shields.io/badge/Postman-000?style=flat-square&logoColor=ff6c37&logo=postman
+[tool-macos]: https://img.shields.io/badge/macOS-000?style=flat-square&logoColor=white&logo=apple
