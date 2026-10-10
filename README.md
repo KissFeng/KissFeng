@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="KissFeng Header" width="100%" />
+<img src="./assets/banner.webp" alt="KissFeng Banner" width="100%" />
 
 <br>
 
@@ -51,10 +51,6 @@
 > **持续沉淀的公开数字花园 (Open Digital Garden & Technical Codex)**
 * 基于 VitePress 搭建的现代化体系化知识库，沉淀关于 AI Agent 上下文工程、分布式系统高可用、底层内核技术与系统设计的实战思考。
 
-#### 🛡️ [Scene-Port-Hider-by-eBPF](https://github.com/KissFeng/Scene-Port-Hider-by-eBPF)
-> **基于 Linux eBPF 的内核态网络观测与隐蔽实践**
-* 探索 Linux 内核态可编程网络包过滤、底层可观测性与网络安全前沿机制。
-
 ---
 
 ### 💫 专业技能矩阵 (Tech Stack & Tools)
@@ -66,17 +62,6 @@
 | **Frontend & Workbench** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-vue] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
 | **DevOps & Infra** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
 | **Workflow & IDE** | ![][tool-cursor] ![][tool-vscode] ![][tool-git] ![][tool-postman] ![][tool-macos] |
-
----
-
-### 🔬 研发与知识产权沉淀 (Research & Systems)
-
-* **国家实用新型专利（已授权）**：
-  * 《一种移动监控平台》
-  * 《一种车辆追踪定位装置》
-  * 《一种多摄像头模组测试设备》
-* **计算机软件著作权登记**：
-  * 4 项系统级软件著作权（涵盖工业 MES 数字孪生平台、智能视觉检测等）
 
 ---
 
@@ -123,7 +108,7 @@
 [frontend-react]: https://img.shields.io/badge/React_19-000?style=flat-square&logoColor=61dafb&logo=react
 [frontend-nextjs]: https://img.shields.io/badge/Next.js-000?style=flat-square&logoColor=white&logo=nextdotjs
 [frontend-ts]: https://img.shields.io/badge/TypeScript-000?style=flat-square&logoColor=3178c6&logo=typescript
-[frontend-vue]: !https://img.shields.io/badge/Vue.js_3-000?style=flat-square&logoColor=42b883&logo=vuedotjs
+[frontend-vue]: https://img.shields.io/badge/Vue.js_3-000?style=flat-square&logoColor=42b883&logo=vuedotjs
 [frontend-tailwind]: https://img.shields.io/badge/TailwindCSS-000?style=flat-square&logoColor=38bdf8&logo=tailwindcss
 [frontend-electron]: https://img.shields.io/badge/Electron-000?style=flat-square&logoColor=47848f&logo=electron
 [frontend-vite]: https://img.shields.io/badge/Vite-000?style=flat-square&logoColor=646cff&logo=vite
