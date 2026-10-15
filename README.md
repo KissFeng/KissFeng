@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://notes.power8.top/"><img src="https://img.shields.io/badge/Digital_Garden-notes.power8.top-0a0e17?style=flat-square&logo=gitbook&logoColor=38bdf8" alt="Digital Garden" /></a>
   <a href="https://github.com/KissFeng"><img src="https://img.shields.io/badge/GitHub-KissFeng-0a0e17?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="mailto:kissfeng6699@gmail.com"><img src="https://img.shields.io/badge/Email-kissfeng6699%40gmail.com-0a0e17?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:kissfeng66@gmail.com"><img src="https://img.shields.io/badge/Email-kissfeng66%40gmail.com-0a0e17?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <!-- Dynamic Architectural Motto -->
