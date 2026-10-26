@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 96" width="680" height="96" fill="none">
+  <!-- Minimalist Background with subtle border -->
+  <rect width="680" height="96" rx="10" fill="#0a0e17" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Large Stylized Opening Quote Mark -->
+  <text x="24" y="52" fill="#38bdf8" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="bold" opacity="0.4">“</text>
+
+  <!-- Chinese Text -->
+  <text x="64" y="44" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="15" font-weight="500" letter-spacing="1.2">
+    保持好奇，持续构建，把想法变成现实。
+  </text>
+
+  <!-- English Text -->
+  <text x="64" y="68" fill="#94a3b8" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="12" letter-spacing="0.5">
+    Stay curious, keep shipping, and build things that matter.
+  </text>
+
+  <!-- Subtle Author Tag at Bottom Right -->
+  <text x="652" y="78" fill="#475569" font-family="'Fira Code', monospace" font-size="10" text-anchor="end" letter-spacing="1">
+    // POWER
+  </text>
+</svg>
