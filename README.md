@@ -6,10 +6,11 @@
 
 # Power (KissFeng)
 
-> *“保持好奇，持续构建，把想法变成现实。”*  
-> *“Stay curious, keep shipping, and build things that matter.”*
-
 <br>
+
+<img src="./assets/quote.svg" alt="Quote Motto" width="620" />
+
+<br><br>
 
 <p align="center">
   <a href="https://notes.power8.top/"><img src="https://img.shields.io/badge/Digital_Garden-notes.power8.top-0a0e17?style=flat-square&logo=gitbook&logoColor=38bdf8" alt="Digital Garden" /></a>
