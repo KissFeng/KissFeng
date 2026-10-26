@@ -54,9 +54,38 @@
 
 ### ⚡ 技术图谱 (Technical Focus)
 
-```text
-AI & Agent Core    :: LangGraph · Claude Agent SDK · Model Context Protocol (MCP) · Qdrant · RRF Hybrid Search
-Backend & Systems  :: Python (FastAPI) · Java (Spring Boot 3) · Redis · MySQL · RabbitMQ
-Frontend Workflows :: React 19 · Next.js · TypeScript · TailwindCSS · Electron · Vite
-Infrastructure     :: Docker · Linux · Nginx · GitHub Actions · Vercel
-```
+| 领域 | 核心技术栈与生态 |
+| :--- | :--- |
+| **AI & Agent Core** | ![][ai-langgraph] ![][ai-claude] ![][ai-mcp] ![][ai-qdrant] ![][ai-pytorch] ![][ai-openai] |
+| **Backend & Systems** | ![][backend-python] ![][backend-fastapi] ![][backend-java] ![][backend-spring] ![][backend-redis] ![][backend-mysql] ![][backend-rabbitmq] |
+| **Frontend Workflows** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
+| **DevOps & Infra** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
+
+<!-- Tech Stack Badges (Uniform 0a0e17 Dark Slate Theme) -->
+[ai-langgraph]: https://img.shields.io/badge/LangGraph-0a0e17?style=flat-square&logo=diagram-next&logoColor=38bdf8
+[ai-claude]: https://img.shields.io/badge/Claude_Agent_SDK-0a0e17?style=flat-square&logo=anthropic&logoColor=d97706
+[ai-mcp]: https://img.shields.io/badge/MCP_Protocol-0a0e17?style=flat-square&logo=connectdevelop&logoColor=38bdf8
+[ai-qdrant]: https://img.shields.io/badge/Qdrant-0a0e17?style=flat-square&logo=databricks&logoColor=ef4444
+[ai-pytorch]: https://img.shields.io/badge/PyTorch-0a0e17?style=flat-square&logo=pytorch&logoColor=ee4c2c
+[ai-openai]: https://img.shields.io/badge/OpenAI-0a0e17?style=flat-square&logo=openai&logoColor=white
+
+[backend-python]: https://img.shields.io/badge/Python-0a0e17?style=flat-square&logo=python&logoColor=white
+[backend-fastapi]: https://img.shields.io/badge/FastAPI-0a0e17?style=flat-square&logo=fastapi&logoColor=059669
+[backend-java]: https://img.shields.io/badge/Java_17+-0a0e17?style=flat-square&logo=openjdk&logoColor=white
+[backend-spring]: https://img.shields.io/badge/Spring_Boot_3-0a0e17?style=flat-square&logo=springboot&logoColor=6db33f
+[backend-redis]: https://img.shields.io/badge/Redis-0a0e17?style=flat-square&logo=redis&logoColor=dc2626
+[backend-mysql]: https://img.shields.io/badge/MySQL-0a0e17?style=flat-square&logo=mysql&logoColor=white
+[backend-rabbitmq]: https://img.shields.io/badge/RabbitMQ-0a0e17?style=flat-square&logo=rabbitmq&logoColor=ff6600
+
+[frontend-react]: https://img.shields.io/badge/React_19-0a0e17?style=flat-square&logo=react&logoColor=61dafb
+[frontend-nextjs]: https://img.shields.io/badge/Next.js-0a0e17?style=flat-square&logo=nextdotjs&logoColor=white
+[frontend-ts]: https://img.shields.io/badge/TypeScript-0a0e17?style=flat-square&logo=typescript&logoColor=3178c6
+[frontend-tailwind]: https://img.shields.io/badge/TailwindCSS-0a0e17?style=flat-square&logo=tailwindcss&logoColor=38bdf8
+[frontend-electron]: https://img.shields.io/badge/Electron-0a0e17?style=flat-square&logo=electron&logoColor=47848f
+[frontend-vite]: https://img.shields.io/badge/Vite-0a0e17?style=flat-square&logo=vite&logoColor=646cff
+
+[ops-docker]: https://img.shields.io/badge/Docker-0a0e17?style=flat-square&logo=docker&logoColor=2496ed
+[ops-linux]: https://img.shields.io/badge/Linux-0a0e17?style=flat-square&logo=linux&logoColor=white
+[ops-nginx]: https://img.shields.io/badge/Nginx-0a0e17?style=flat-square&logo=nginx&logoColor=009639
+[ops-actions]: https://img.shields.io/badge/GitHub_Actions-0a0e17?style=flat-square&logo=githubactions&logoColor=white
+[ops-vercel]: https://img.shields.io/badge/Vercel-0a0e17?style=flat-square&logo=vercel&logoColor=white
