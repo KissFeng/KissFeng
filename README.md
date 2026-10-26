@@ -8,7 +8,7 @@
 
 <br>
 
-<img src="./assets/quote.svg" alt="Quote Motto" width="620" />
+<img src="./assets/quote-brush.svg" alt="Quote Motto" width="620" />
 
 <br><br>
 
