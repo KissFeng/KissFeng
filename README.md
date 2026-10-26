@@ -4,11 +4,7 @@
 
 <br><br>
 
-# Power (KissFeng)
-
-<br>
-
-<img src="./assets/quote-brush.svg" alt="Quote Motto" width="620" />
+<img src="./assets/quote-signature.svg" alt="Quote Motto" width="640" />
 
 <br><br>
 
