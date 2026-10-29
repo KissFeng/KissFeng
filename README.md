@@ -9,8 +9,7 @@
 <br><br>
 
 <p align="center">
-  <a href="https://notes.power8.top/"><img src="https://img.shields.io/badge/Digital_Garden-notes.power8.top-0a0e17?style=flat-square&logo=gitbook&logoColor=38bdf8" alt="Digital Garden" /></a>
-  <a href="https://github.com/KissFeng"><img src="https://img.shields.io/badge/GitHub-KissFeng-0a0e17?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://notes.power8.top/"><img src="https://img.shields.io/badge/Notes-notes.power8.top-0a0e17?style=flat-square&logo=gitbook&logoColor=38bdf8" alt="Notes" /></a>
   <a href="mailto:kissfeng66@gmail.com"><img src="https://img.shields.io/badge/Email-kissfeng66%40gmail.com-0a0e17?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
@@ -18,38 +17,40 @@
 
 ---
 
-### 💡 正在关注与探索 (Currently Exploring)
+### 👋 关于我
 
-* **AI Agent & 智能体工作流**：探索基于 LangGraph 的显式状态机编排、Model Context Protocol (MCP) 工具生态以及人机协同（HITL）。
-* **混合检索与上下文工程 (RAG)**：稠密向量与 BM25 稀疏检索融合、长上下文治理与体系化知识库构建。
-* **全栈工程与系统韧性**：注重全链路 Trace、流式传输（SSE）与开箱即用的工程交付，从底层服务到交互式工作台。
+软件工程本科在读（2027 届），方向是 AI Agent 和全栈开发。
 
----
-
-### 📦 核心系统与工程架构实践 (Featured Engineering & Architecture)
-
-深耕自主智能体状态机编排、高吞吐生产网关、企业级多租户 SaaS 与跨端运行容器研发。主导打造了**企业级全栈智能体协同平台 (NexusAgent)**、**跨端编程容器与 MCP 协同引擎 (CloudCLI)**、**承载数十亿 Tokens 的生产级聚合模型网关**及**集成 AI 经营决策助手的商业 SaaS 中台**等核心系统，持有 3 项国家授权专利与 4 项软件著作权。
-
-> 💡 **查阅开源代表作、工业级商业架构方案与科研沉淀**：👉 [**查看核心系统与工程实践详情 (Featured Projects Architecture)**](./docs/projects.md)
+- 平时主要在折腾 LangGraph、MCP 和 RAG，喜欢把想法做成能跑起来的东西
+- 有一年多的公司实习经历，做过多租户 SaaS、支付对接这类业务开发
+- 会把学到的东西整理到 [个人笔记](https://notes.power8.top/) 里
 
 ---
 
-### 🌐 开源贡献 (Open Source Contributions)
+### 🛠️ 在做的项目
 
-持续参与主流 AI 基础设施与开源生态建设，在 **Model Context Protocol (MCP)** 官方参考实现、**Dify**、**CodeGraph**、**Datawhale / DeepAgents** 等项目中主导或参与了核心修复与工程优化。
+- **NexusAgent** — 基于 LangGraph 的多智能体协作平台，做了状态持久化、人工审批节点和混合检索
+- **CloudCLI** — 基于 Claude Agent SDK 的编程助手，Web 和 Electron 双端，接了几个自己写的 MCP 服务
+- **[Jie's Notes](https://github.com/KissFeng/Jie-s-Notes)** — 用 VitePress 搭的学习笔记
 
-> 💡 **查阅完整技术方案、Issue 细节与官方合并记录**：👉 [**查看详细开源贡献记录 (Open Source Track Record)**](./docs/contributions.md)
+另外还做过几个实习和接单的项目（代码不公开），整理在 👉 [项目详情](./docs/projects.md)
 
 ---
 
-### ⚡ 技术图谱 (Technical Focus)
+### 🌱 开源贡献
 
-| 领域 | 核心技术栈与生态 |
+给 MCP 官方仓库、Dify、CodeGraph 等项目提过一些修复，详见 👉 [贡献记录](./docs/contributions.md)
+
+---
+
+### 🧰 技术栈
+
+| | |
 | :--- | :--- |
-| **AI & Agent Core** | ![][ai-langgraph] ![][ai-claude] ![][ai-mcp] ![][ai-qdrant] ![][ai-pytorch] ![][ai-openai] |
-| **Backend & Systems** | ![][backend-python] ![][backend-fastapi] ![][backend-java] ![][backend-spring] ![][backend-redis] ![][backend-mysql] ![][backend-rabbitmq] |
-| **Frontend Workflows** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
-| **DevOps & Infra** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
+| **AI** | ![][ai-langgraph] ![][ai-claude] ![][ai-mcp] ![][ai-qdrant] ![][ai-pytorch] ![][ai-openai] |
+| **后端** | ![][backend-python] ![][backend-fastapi] ![][backend-java] ![][backend-spring] ![][backend-redis] ![][backend-mysql] ![][backend-rabbitmq] |
+| **前端** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
+| **运维** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
 
 <!-- Tech Stack Badges (Uniform 0a0e17 Dark Slate Theme) -->
 [ai-langgraph]: https://img.shields.io/badge/LangGraph-0a0e17?style=flat-square&logo=diagram-next&logoColor=38bdf8
