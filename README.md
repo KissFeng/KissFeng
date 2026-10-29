@@ -19,27 +19,27 @@
 
 ### 👋 关于我
 
-软件工程本科在读（2027 届），方向是 AI Agent 和全栈开发。
+软件工程专业本科在读（2027 届），主要方向为 AI Agent 研发与全栈开发。
 
-- 平时主要在折腾 LangGraph、MCP 和 RAG，喜欢把想法做成能跑起来的东西
-- 有一年多的公司实习经历，做过多租户 SaaS、支付对接这类业务开发
-- 会把学到的东西整理到 [个人笔记](https://notes.power8.top/) 里
+- 关注 LangGraph 状态编排、Model Context Protocol（MCP）工具生态与 RAG 检索优化，注重将技术方案落地为可运行的系统
+- 具备一年以上企业实习经历，参与多租户 SaaS、支付对接等业务系统的开发与交付
+- 持续在 [个人笔记](https://notes.power8.top/) 中整理技术学习与项目复盘
 
 ---
 
-### 🛠️ 在做的项目
+### 🛠️ 项目
 
-- **NexusAgent** — 基于 LangGraph 的多智能体协作平台，做了状态持久化、人工审批节点和混合检索
-- **CloudCLI** — 基于 Claude Agent SDK 的编程助手，Web 和 Electron 双端，接了几个自己写的 MCP 服务
-- **[Jie's Notes](https://github.com/KissFeng/Jie-s-Notes)** — 用 VitePress 搭的学习笔记
+- **NexusAgent** — 基于 LangGraph 的多智能体协作平台，实现了状态持久化、人工审批中断与混合检索
+- **CloudCLI** — 基于 Claude Agent SDK 的跨端编程助手，支持 Web 与 Electron，并接入自研 MCP 服务
+- **[Jie's Notes](https://github.com/KissFeng/Jie-s-Notes)** — 基于 VitePress 构建的个人技术笔记站
 
-另外还做过几个实习和接单的项目（代码不公开），整理在 👉 [项目详情](./docs/projects.md)
+此外还包括若干实习及外包项目（代码未公开），详见 👉 [项目详情](./docs/projects.md)
 
 ---
 
 ### 🌱 开源贡献
 
-给 MCP 官方仓库、Dify、CodeGraph 等项目提过一些修复，详见 👉 [贡献记录](./docs/contributions.md)
+曾向 MCP 官方仓库、Dify、CodeGraph 等项目提交缺陷修复与改进，详见 👉 [贡献记录](./docs/contributions.md)
 
 ---
 
