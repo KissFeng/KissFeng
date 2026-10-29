@@ -49,6 +49,14 @@
 
 ---
 
+### 🌐 开源贡献 (Open Source Contributions)
+
+持续参与主流 AI 基础设施与开源生态建设，在 **Model Context Protocol (MCP)** 官方参考实现、**Dify**、**CodeGraph**、**Datawhale / DeepAgents** 等项目中主导或参与了核心修复与工程优化。
+
+> 💡 **查阅完整技术方案、Issue 细节与官方合并记录**：👉 [**查看详细开源贡献记录 (Open Source Track Record)**](./docs/contributions.md)
+
+---
+
 ### ⚡ 技术图谱 (Technical Focus)
 
 | 领域 | 核心技术栈与生态 |
