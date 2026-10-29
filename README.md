@@ -26,11 +26,11 @@
 
 ---
 
-### 📦 核心系统与项目实践 (Featured Projects)
+### 📦 核心系统与工程架构实践 (Featured Engineering & Architecture)
 
-聚焦自主智能体状态机编排、跨端编程运行容器与知识工程体系建设，主导研发了**企业级全栈智能体协同平台 (NexusAgent)**、**跨端编程容器与 MCP 协同引擎 (CloudCLI)** 及**公开数字花园 (Jie's Notes)** 等核心系统。
+深耕自主智能体状态机编排、高吞吐生产网关、企业级多租户 SaaS 与跨端运行容器研发。主导打造了**企业级全栈智能体协同平台 (NexusAgent)**、**跨端编程容器与 MCP 协同引擎 (CloudCLI)**、**承载数十亿 Tokens 的生产级聚合模型网关**及**集成 AI 经营决策助手的商业 SaaS 中台**等核心系统，持有 3 项国家授权专利与 4 项软件著作权。
 
-> 💡 **查阅完整系统架构设计、演进复盘与技术特性**：👉 [**查看核心系统与项目实践详情 (Featured Projects Architecture)**](./docs/projects.md)
+> 💡 **查阅开源代表作、工业级商业架构方案与科研沉淀**：👉 [**查看核心系统与工程实践详情 (Featured Projects Architecture)**](./docs/projects.md)
 
 ---
 

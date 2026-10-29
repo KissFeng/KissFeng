@@ -1,28 +1,88 @@
-# 核心系统与项目实践 (Featured Projects Architecture)
+# 核心系统与工程架构实践 (Featured Engineering & System Architecture)
 
-本项目记录汇总了主导研发的企业级智能体平台、跨端运行时容器及公开知识体系的技术架构与核心特性。
+本项目记录系统收录了主导研发的自主智能体平台、跨端运行时容器，以及在企业级商业软件与生产级大模型工程中的技术架构与工程实践。
 
 ---
 
-## 🤖 1. NexusAgent
-> **企业级全栈智能体协同平台 (Multi-Agent Orchestration Platform)** `Proprietary`
+## 🏛️ 一、开源代表作与智能体技术探索 (Open Source Systems)
 
-* **状态机编排**：基于 LangGraph 深度重构复杂 Agent 协同流，将黑盒隐式 ReAct 循环收敛为确定性的有向状态图（StateGraph），实现全流程状态外部持久化 Checkpointer 快照与高危操作人机在回路（HITL）中断审批。
-* **双路混合检索 (Hybrid RAG)**：融合 Qdrant 稠密向量与 Rank-BM25 稀疏切片，结合互易秩融合（RRF）算法进行二次重排，动态注入会话事实偏好、实体画像与长期记忆。
-* **MCP 网关与流式工作台**：落地标准 Model Context Protocol（MCP）客户端网关，集成 SSE 极速流式传输与思维链全流程留痕。
+### 🤖 1. NexusAgent
+> **企业级全栈智能体协同平台 (Multi-Agent Orchestration Platform)** `Proprietary / Open Codex`
+
+* **显式状态机与人机在回路 (HITL)**：针对传统 ReAct 循环在长链条多工具任务中黑盒失控与无法干预的痛点，采用 LangGraph 有向图（StateGraph）对 Agent 执行流建模；引入 Checkpointer 实现状态外部快照持久化，通过 `interrupt` 机制在高危工具执行前挂起等待人工审批，支持 `Command.resume` 幂等断点续跑。
+* **双路混合检索 RAG 与长记忆沉淀**：构建融合 Qdrant 稠密向量与 Rank-BM25 稀疏切片的混合检索体系，利用 RRF（倒数排名融合）重排算法综合打分，显著改善专有名词与长尾知识召回覆盖；结合会话事实无感沉淀与置信度向量消歧，将用户偏好动态注入 Prompt，有效遏制长上下文膨胀与模型幻觉。
+* **全链路可观测性与容错自愈沙箱**：集成链路追踪系统，对多步 Tool Calling 耗时、Token 消耗与 Checkpoint 快照进行全链路 Trace 打点与成本归因；设计 Tool Error 结构化自纠偏反馈回路与轻量代码执行沙箱，实现工具执行异常自适应重试、指令白名单校验与超时熔断。
+* **标准 MCP 客户端网关与流式工作台**：对标 Cherry Studio 质感设计 React 19 三栏交互工作台，集成 SSE 极速流式传输与思维链折叠留痕；开发标准 Model Context Protocol（MCP）客户端网关，规范化接入本地与远程 Tool 服务，支持飞书 / 企微 Webhook 协同渠道。
 * 🔗 [阅读架构演进与设计复盘 ↗](https://notes.power8.top/)
 
 ---
 
-## ⚡ 2. CloudCLI (灵犀)
+### ⚡ 2. CloudCLI (灵犀)
 > **跨端智能体编程容器与多 MCP 协同引擎 (Cross-Platform Agent Runtime)**
 
-* **会话容器化**：基于 Claude Agent SDK 深度封装多会话智能体运行容器，自研基于 stdio 进程通信的多媒体与实时数据 MCP 服务，实现进程级隔离与工具链动态热插拔。
-* **终端仿真管道**：基于 `node-pty` 与 `@xterm/xterm`（WebGL 硬件加速）构建高保真双向伪终端流，单架构多端交付 Web 网页工作台与 Electron 跨平台桌面端。
+* **智能体核心引擎与多 MCP 适配**：基于 `@anthropic-ai/claude-agent-sdk` 深度封装多会话智能体运行容器，深度遵循 Model Context Protocol（MCP）标准；自研面向行情订阅与自动化分析的 MCP 服务（stdio 进程通信）与多媒体处理 MCP，实现智能体会话动态注册、跨系统上下文注入与复杂 Tool Calling 自动化流转。
+* **Web 伪终端流式仿真与多端一体化交付**：基于 `node-pty`、`@xterm/xterm`（WebGL 硬件加速）与 WebSocket 搭建双向流式终端管道，将底座 Agent CLI 交互高保真映射至 Web 界面；通过单一工程架构多端交付 Web 网页工作台与 Electron 跨平台桌面端，集成交互式文件树与代码 Diff 差异审查。
+* **会话状态隔离与轻量化运维流水线**：基于 SQLite 设计会话上下文快照与多工作区（Worktree）状态隔离机制；编写自动化运维脚本，实现前后端服务依赖检测、异常拉起监控与多进程聚合日志排查。
 
 ---
 
-## 📖 3. Jie's Notes
+### 📖 3. Jie's Notes
 > **持续沉淀的公开数字花园 (Open Digital Garden & Technical Codex)** `Open Source`
-* **知识沉淀**：基于 VitePress 搭建的现代化体系化数字花园，深度沉淀关于 AI Agent 上下文工程、分布式系统高可用、底层内核技术与系统设计的实战笔记与架构思考。
+
+* **知识体系化沉淀**：基于 VitePress 搭建的现代化体系化数字花园，深度沉淀关于 AI Agent 上下文工程、分布式系统高可用、底层内核技术与系统设计的实战笔记与架构思考。
 * 🌐 线上站点：[notes.power8.top](https://notes.power8.top/) ｜ 源码：[KissFeng/Jie-s-Notes](https://github.com/KissFeng/Jie-s-Notes)
+
+---
+
+## 💼 二、工业级商业系统与工程落地 (Enterprise & Commercial Systems)
+*(以下项目为商业交付或生产落地成果，已进行严格数据脱敏，不公开私有项目名称与代码仓库，仅做纯技术架构与工程方案描述)*
+
+### 🚀 1. 高吞吐生产级模型网关与协议统一治理 (Production Model Gateway & Resilience)
+> **承载月均 20~50 亿 Tokens 真实交互流量的大模型接入中枢**
+
+* **多厂商协议统一与高可用容灾**：自研大模型聚合路由代理，统一抽象并封装 OpenAI、Anthropic、Google 等多厂商协议规范；设计具备动态权重负载均衡、上游限流熔断与自适应 Fallback 降级机制的路由中间件，保障流式传输（SSE）管道连接的秒级平滑切换。
+* **Prompt 缓存与全链路治理**：实现模型上下文缓存（Prompt Caching）命中率感知优化，结合动态压缩策略大幅压降 Token 交互成本与首字响应延迟；建立全链路 Trace 追踪与打点系统，实现多工具调用深度依赖分析与精细化成本归因。
+* **沙箱防护与自纠偏回路**：针对上游异常响应与 Tool Calling 错误，设计结构化自适应重试与修正回路，结合指令执行超时熔断，杜绝模型陷入死循环或非法调用。
+
+---
+
+### 🏬 2. 多商户商业中台架构与行级隔离 (Multi-Tenant SaaS Core & Row-Level Isolation)
+> **多商户分层架构 + 严密逻辑隔离体系**
+
+* **模块化单体分层与租户隔离**：基于 Spring Boot 构建高内聚模块化单体分层架构，集成 Sa-Token 鉴权体系；采用基于租户 ID 与 MyBatis-Plus 拦截器的共享库表行级逻辑隔离方案，确保商户数据边界严密隔离。
+* **数据库慢查询优化与缓存一致性**：针对历史订单与多维度统计等慢查询场景重构复合索引与 SQL 执行计划；引入 Redis 多级缓存与分布式锁防击穿机制，针对门店排班与客流高峰进行削峰，使核心高频接口 P99 响应延迟降低 45% 以上。
+* **动态表单与业务流转引擎**：设计灵活的动态表单引擎与租户权限体系，高效支撑多租户不同业务场景的个性化表单定制与工作流驱动。
+
+---
+
+### 📊 3. Function Calling 经营决策与智能问答中台 (AI BI Copilot via Function Calling)
+> **基于大模型工具调用的自然语言商业智能（BI）分析系统**
+
+* **多维业务指标 Schema 抽象**：标准化设计流水汇总、商户画像、会员转化率与业绩达成等核心经营指标的多工具调用 Schema。
+* **自然语言穿透与统计聚合**：管理者可通过自然语言直接发起跨模块复杂统计分析，由大模型自动解析意图并精准调用底层业务统计 API，聚合生成结构化分析指标并动态可视化渲染，降低数据决策门槛。
+
+---
+
+### 💳 4. 幂等交易与状态机支付结算引擎 (Idempotent Payment & Settlement Pipeline)
+> **强一致性分布式支付、分账与补偿重试机制**
+
+* **状态机驱动与幂等设计**：深度对接微信支付、银联支付与第三方服务，构建严格基于数据库状态机驱动的账单全生命周期流转机制，针对网络抖动与异步重试场景实现底层防重与强幂等防重复扣款。
+* **分布式延迟对账与补偿闭环**：建立分布式延迟任务重试队列与主动对账拉取补偿机制，妥善处理弱网、网络超时、掉单及外部渠道回调丢失等边缘异常，确保极端场景下的资金交易状态最终一致性。
+
+---
+
+### 🛠️ 5. AI 赋能研发效能与契约化落地 (AI-Assisted Engineering Workflow)
+> **全流程高质量研发效能实践**
+
+* **契约化 API 规范与自动回归**：结合 Claude Code、Cursor 等前沿 AI 工具链，构建针对业务核心 API 契约的自动化单元测试生成与集成验证流，大幅提升复杂业务模块的重构信心与回归测试效率。
+
+---
+
+## 📜 三、科研沉淀、专利与软件著作权 (Patents & Intellectual Property)
+
+* **国家实用新型专利（已授权）**：
+  * 《一种移动监控平台》（授权）
+  * 《一种车辆追踪定位装置》（授权）
+  * 《一种多摄像头模组测试设备》（授权）
+* **计算机软件著作权登记（4项）**：
+  * 涵盖工业 MES 数字孪生平台、智能视觉检测等工业级与工程级系统软件。
