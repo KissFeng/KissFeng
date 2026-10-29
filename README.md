@@ -43,6 +43,19 @@
 
 ---
 
+### 📈 GitHub 动态
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=KissFeng&theme=dark&hide_border=true&background=0a0e17&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&locale=zh_Hans" alt="GitHub Streak" width="37%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KissFeng/KissFeng/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KissFeng/KissFeng/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/KissFeng/KissFeng/output/github-contribution-grid-snake.svg" width="61%">
+  </picture>
+</p>
+
+---
+
 ### 🧰 技术栈
 
 | | |
