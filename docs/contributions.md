@@ -9,7 +9,7 @@
 | modelcontextprotocol/servers | 1 | ✅ 方案被采纳并合并 |
 | langgenius/dify | 3 | ✅ 全部合并 |
 | datawhalechina/deepagents-in-action | 1 | ✅ 已合并 |
-| colbymchenry/codegraph | 1 | 🔄 审查通过，待合并 |
+| colbymchenry/codegraph | 2 | ✅ 方案被采纳并在新版本落地 |
 | farion1231/cc-switch | 2 | 🔄 审查中 |
 
 ---
@@ -61,8 +61,15 @@
   - 支持 `window.localStorage.getItem()`、`self.close()` 等链式调用形式
   - 若文件中存在同名的局部变量、参数或导入绑定（如参数名为 `location`），仍按项目代码正常解析，避免误判
   - 补充正向与反向测试用例
-- **过程**：首轮审查中 Reviewer 提出了若干边界情况，修改后经复测确认无遗留问题。
-- **链接**：[PR #2915](https://github.com/colbymchenry/codegraph/pull/2915)
+- **过程**：首轮审查中 Reviewer 提出了若干边界情况，修改后经复测确认无遗留问题。维护者随后在 PR [#3026](https://github.com/colbymchenry/codegraph/pull/3026) 中采纳该方案落地，并在 Changelog 中注明致谢。
+- **链接**：[PR #2915](https://github.com/colbymchenry/codegraph/pull/2915) · [PR #3026（已合并）](https://github.com/colbymchenry/codegraph/pull/3026)
+
+### 索引构建期间执行 status 命令触发数据库锁异常
+
+- **问题**：在后台执行 `codegraph index` 或大批量边加载时运行 `codegraph status`，由于 status 命令以读写模式打开数据库，会触发打开时的索引自愈操作并修改 SQLite schema，导致正在运行的写入事务被中断，抛出 `SQLITE_BUSY_SNAPSHOT (517) / database is locked`。
+- **方案**：在 status 命令中传入 `{ readOnly: true }`，使连接在只读模式下立即返回，跳过迁移、批量加载自愈及 WAL 维护；增加模拟索引重构与 status 命令并发调用的测试用例。
+- **过程**：官方在 PR [#2930](https://github.com/colbymchenry/codegraph/pull/2930) 中采纳了该只读修复与并发测试，并在 Changelog 中注明致谢。
+- **链接**：[Issue #2913](https://github.com/colbymchenry/codegraph/issues/2913) · [PR #2916](https://github.com/colbymchenry/codegraph/pull/2916) · [PR #2930（已合并）](https://github.com/colbymchenry/codegraph/pull/2930)
 
 ---
 
@@ -80,4 +87,5 @@
 
 - **问题**：在 Windows 环境下，工具已被检测到安装路径，但因版本读取失败，版本列显示为「未安装」并提供「安装」按钮，容易诱导用户重复安装。
 - **改动**：在检测到安装路径但未获取版本号时显示「未知」并附加提示，同时隐藏安装按钮；补充 5 种语言的文案及对应测试。
+- **过程**：维护者指出配置目录指向 WSL 时若 WSL 内未安装需保留安装按钮的边界情况；已补充 `installedButUnknown` 判定与 WSL 单测，等待二次审查。
 - **链接**：[Issue #8889](https://github.com/farion1231/cc-switch/issues/8889) · [PR #9007](https://github.com/farion1231/cc-switch/pull/9007)
