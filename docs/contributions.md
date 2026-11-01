@@ -11,6 +11,8 @@
 | datawhalechina/deepagents-in-action | 1 | ✅ 已合并 |
 | colbymchenry/codegraph | 2 | ✅ 方案被采纳并在新版本落地 |
 | farion1231/cc-switch | 2 | 🔄 审查中 |
+| NousResearch/hermes-agent | 1 | 🔄 审查中 |
+| openclaw/openclaw | 1 | 🔄 方案与社区同类 PR 收敛 |
 
 ---
 
@@ -89,3 +91,34 @@
 - **改动**：在检测到安装路径但未获取版本号时显示「未知」并附加提示，同时隐藏安装按钮；补充 5 种语言的文案及对应测试。
 - **过程**：维护者指出配置目录指向 WSL 时若 WSL 内未安装需保留安装按钮的边界情况；已补充 `installedButUnknown` 判定与 WSL 单测，等待二次审查。
 - **链接**：[Issue #8889](https://github.com/farion1231/cc-switch/issues/8889) · [PR #9007](https://github.com/farion1231/cc-switch/pull/9007)
+
+---
+
+## NousResearch/hermes-agent
+
+> 开源自主 AI Agent 框架与运行时环境。
+
+### 单进程运行测试套件时上下文状态与环境变量跨测试泄漏
+
+- **问题**：在单一 pytest 进程下运行 `tests/tui_gateway/` 全量测试套件时，由于 `test_agent_rebuild_keeps_pre_compression_process_owners` 模拟 `_release_build_profile_scopes` 时未执行实际释放，导致 `_SECRET_SCOPE` ContextVar 泄露到后续用例中，引发 8 个 fail-closed 用例因未捕获到预期的 `UnscopedSecretError` 而失败；同时 `_HERMES_BEHAVIORAL_VARS` 缺少对 `HERMES_PROFILE` 等环境变量的屏蔽，宿主环境容易渗入单测。
+- **改动**：
+  - 在会话重构测试中恢复调用真实的 profile scope 释放逻辑，并在用例结束时显式断言上下文干净；
+  - 在 `tests/conftest.py` 中为 `_SECRET_SCOPE` 与 `_MULTIPLEX_CONTEXT` 注入独立 `ContextVar`，确保每个用例拥有隔离的上下文环境；
+  - 在 `tests/_fixtures/env_filter.py` 中补充 `HERMES_PROFILE` 与 `HERMES_PROFILE_NAME` 过滤项。
+- **链接**：[Issue #147198](https://github.com/NousResearch/hermes-agent/issues/147198) · [PR #147223](https://github.com/NousResearch/hermes-agent/pull/147223)
+
+---
+
+## openclaw/openclaw
+
+> 开源自主多平台 AI Agent 框架。
+
+### read 工具拒绝模型显式传入的 optional: false 参数
+
+- **问题**：`read` 工具的输入 Schema 将 `optional` 字段硬编码为 `Type.Optional(Type.Literal(true))`，当模型显式传入 `"optional": false` 表示文件必须存在时，会触发 Schema 校验错误 `optional: must be equal to constant` 并导致多余的模型轮次重试。
+- **改动**：
+  - 将输入 Schema 中的 `optional` 属性放宽为 `Type.Optional(Type.Boolean())`，与底层文件读取的语义判定保持一致；
+  - 同步更新 Code Mode 的提示词签名预期（由 `optional?: true` 调整为 `optional?: boolean`）；
+  - 补充通过参数校验层到读取执行的回归测试。
+- **过程**：官方机器人 Review 确认修复有效；由于社区同时存在同类提议，合并收敛至早期的关联 PR 中。
+- **链接**：[Issue #189440](https://github.com/openclaw/openclaw/issues/189440) · [PR #189497](https://github.com/openclaw/openclaw/pull/189497)

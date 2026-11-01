@@ -39,7 +39,7 @@
 
 ### 🌱 开源贡献
 
-曾向 MCP 官方仓库、Dify、CodeGraph 等项目提交缺陷修复与改进，详见 👉 [贡献记录](./docs/contributions.md)
+曾向 MCP 官方仓库、Dify、CodeGraph、Hermes Agent 等项目提交缺陷修复与改进，详见 👉 [贡献记录](./docs/contributions.md)
 
 ---
 
