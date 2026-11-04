@@ -4,15 +4,19 @@
 
 在日常使用开源工具的过程中，针对遇到的问题进行定位并提交修复。以下按项目整理目前的贡献。
 
+最近核对：**2026-11-04**。状态依据 GitHub PR 页面及讨论记录；「已合并」指本人提交的 PR 直接合并，「方案被采纳」指维护者在其他 PR 中参考或整合了相关方案。
+
 | 项目 | 贡献数 | 状态 |
 | :--- | :---: | :--- |
-| modelcontextprotocol/servers | 1 | ✅ 方案被采纳并合并 |
+| modelcontextprotocol/servers | 1 | ✅ Issue 中的方案被参考，维护者 PR 已合并 |
 | langgenius/dify | 3 | ✅ 全部合并 |
 | datawhalechina/deepagents-in-action | 1 | ✅ 已合并 |
-| colbymchenry/codegraph | 2 | ✅ 方案被采纳并在新版本落地 |
-| farion1231/cc-switch | 2 | 🔄 审查中 |
-| NousResearch/hermes-agent | 1 | 🔄 审查中 |
-| openclaw/openclaw | 1 | 🔄 方案与社区同类 PR 收敛 |
+| colbymchenry/codegraph | 2 | ✅ 方案被采纳；本人 PR 被替代关闭 |
+| farion1231/cc-switch | 2 | 🔄 均已重新开启，等待复审 |
+| NousResearch/hermes-agent | 1 | 🔄 开放中，已有贡献者反馈局部测试通过 |
+| openclaw/openclaw | 1 | ⚪ 因重复关闭，未合并 |
+
+以上包含 **4 条本人 PR 直接合并、3 项方案被参考或整合、3 条 PR 开放待审、1 条 PR 因重复关闭**。个人 fork 内的测试 PR 不计入。
 
 ---
 
@@ -63,15 +67,15 @@
   - 支持 `window.localStorage.getItem()`、`self.close()` 等链式调用形式
   - 若文件中存在同名的局部变量、参数或导入绑定（如参数名为 `location`），仍按项目代码正常解析，避免误判
   - 补充正向与反向测试用例
-- **过程**：首轮审查中 Reviewer 提出了若干边界情况，修改后经复测确认无遗留问题。维护者随后在 PR [#3026](https://github.com/colbymchenry/codegraph/pull/3026) 中采纳该方案落地，并在 Changelog 中注明致谢。
-- **链接**：[PR #2915](https://github.com/colbymchenry/codegraph/pull/2915) · [PR #3026（已合并）](https://github.com/colbymchenry/codegraph/pull/3026)
+- **过程**：首轮审查中 Reviewer 提出了若干边界情况，修改后经复测确认无遗留问题。维护者随后在 PR [#3026](https://github.com/colbymchenry/codegraph/pull/3026) 中参考并重新实现该修复，注明了原 PR 来源；本人 PR #2915 被替代关闭，未直接合并。
+- **链接**：[PR #2915（被替代关闭）](https://github.com/colbymchenry/codegraph/pull/2915) · [维护者 PR #3026（已合并）](https://github.com/colbymchenry/codegraph/pull/3026)
 
 ### 索引构建期间执行 status 命令触发数据库锁异常
 
 - **问题**：在后台执行 `codegraph index` 或大批量边加载时运行 `codegraph status`，由于 status 命令以读写模式打开数据库，会触发打开时的索引自愈操作并修改 SQLite schema，导致正在运行的写入事务被中断，抛出 `SQLITE_BUSY_SNAPSHOT (517) / database is locked`。
 - **方案**：在 status 命令中传入 `{ readOnly: true }`，使连接在只读模式下立即返回，跳过迁移、批量加载自愈及 WAL 维护；增加模拟索引重构与 status 命令并发调用的测试用例。
-- **过程**：官方在 PR [#2930](https://github.com/colbymchenry/codegraph/pull/2930) 中采纳了该只读修复与并发测试，并在 Changelog 中注明致谢。
-- **链接**：[Issue #2913](https://github.com/colbymchenry/codegraph/issues/2913) · [PR #2916](https://github.com/colbymchenry/codegraph/pull/2916) · [PR #2930（已合并）](https://github.com/colbymchenry/codegraph/pull/2930)
+- **过程**：维护者在 PR [#2930](https://github.com/colbymchenry/codegraph/pull/2930) 中整合了同类修复，并纳入本人测试中「写事务期间运行 status」的交错场景，在 Changelog 中注明致谢。本人 PR #2916 被替代关闭，未直接合并。
+- **链接**：[Issue #2913](https://github.com/colbymchenry/codegraph/issues/2913) · [PR #2916（被替代关闭）](https://github.com/colbymchenry/codegraph/pull/2916) · [维护者 PR #2930（已合并）](https://github.com/colbymchenry/codegraph/pull/2930)
 
 ---
 
@@ -83,14 +87,15 @@
 
 - **问题**：会话数量较多时，搜索框每次输入都会触发整个列表的重新筛选与分组，导致明显的输入延迟。
 - **改动**：为搜索输入增加 300ms 防抖；清空输入时跳过延迟，立即恢复完整列表，并补充防抖逻辑的单元测试。
-- **链接**：[Issue #2376](https://github.com/farion1231/cc-switch/issues/2376) · [PR #9006](https://github.com/farion1231/cc-switch/pull/9006)
+- **进展**：11 月 2 日因缺少 PR 模板要求的「Human Note / 本人说明」被暂时关闭，补齐并回复后由维护者重新开启；目前等待维护者审查，尚未合并。
+- **链接**：[Issue #2376](https://github.com/farion1231/cc-switch/issues/2376) · [PR #9006（开放待审）](https://github.com/farion1231/cc-switch/pull/9006)
 
 ### 应用页将「版本读取失败」误显示为「未安装」
 
 - **问题**：在 Windows 环境下，工具已被检测到安装路径，但因版本读取失败，版本列显示为「未安装」并提供「安装」按钮，容易诱导用户重复安装。
 - **改动**：在检测到安装路径但未获取版本号时显示「未知」并附加提示，同时隐藏安装按钮；补充 5 种语言的文案及对应测试。
-- **过程**：维护者指出配置目录指向 WSL 时若 WSL 内未安装需保留安装按钮的边界情况；已补充 `installedButUnknown` 判定与 WSL 单测，等待二次审查。
-- **链接**：[Issue #8889](https://github.com/farion1231/cc-switch/issues/8889) · [PR #9007](https://github.com/farion1231/cc-switch/pull/9007)
+- **过程**：维护者指出配置目录指向 WSL 时若 WSL 内未安装需保留安装按钮的边界情况；已补充 `installedButUnknown` 判定与 WSL 单测。11 月 2 日因缺少「Human Note / 本人说明」被暂时关闭，补齐并回复后由维护者重新开启；目前等待复审，尚未合并。
+- **链接**：[Issue #8889](https://github.com/farion1231/cc-switch/issues/8889) · [PR #9007（开放待复审）](https://github.com/farion1231/cc-switch/pull/9007)
 
 ---
 
@@ -105,7 +110,8 @@
   - 在会话重构测试中恢复调用真实的 profile scope 释放逻辑，并在用例结束时显式断言上下文干净；
   - 在 `tests/conftest.py` 中为 `_SECRET_SCOPE` 与 `_MULTIPLEX_CONTEXT` 注入独立 `ContextVar`，确保每个用例拥有隔离的上下文环境；
   - 在 `tests/_fixtures/env_filter.py` 中补充 `HERMES_PROFILE` 与 `HERMES_PROFILE_NAME` 过滤项。
-- **链接**：[Issue #147198](https://github.com/NousResearch/hermes-agent/issues/147198) · [PR #147223](https://github.com/NousResearch/hermes-agent/pull/147223)
+- **进展**：11 月 1 日，贡献者 whyyagswhy 反馈在 PR 提交 `613c8a27` 上运行 `test_detached_process_notify_keepalive.py`，结果为 **21 passed、0 failed**，三个改动文件的 Ruff 检查也通过。该反馈仅覆盖单个测试文件，未运行相邻测试套件；PR 目前仍开放，尚无正式 Review，也未合并。
+- **链接**：[Issue #147198](https://github.com/NousResearch/hermes-agent/issues/147198) · [PR #147223（开放待审）](https://github.com/NousResearch/hermes-agent/pull/147223)
 
 ---
 
@@ -120,5 +126,5 @@
   - 将输入 Schema 中的 `optional` 属性放宽为 `Type.Optional(Type.Boolean())`，与底层文件读取的语义判定保持一致；
   - 同步更新 Code Mode 的提示词签名预期（由 `optional?: true` 调整为 `optional?: boolean`）；
   - 补充通过参数校验层到读取执行的回归测试。
-- **过程**：官方机器人 Review 确认修复有效；由于社区同时存在同类提议，合并收敛至早期的关联 PR 中。
-- **链接**：[Issue #189440](https://github.com/openclaw/openclaw/issues/189440) · [PR #189497](https://github.com/openclaw/openclaw/pull/189497)
+- **过程**：机器人审查认可放宽输入 Schema 的修复方向，但认为更早的 [PR #189494](https://github.com/openclaw/openclaw/pull/189494) 已覆盖同一问题，且有更完整的 Gateway 行为证据。因此本人 PR #189497 于 11 月 1 日以重复／被替代为由关闭，**未合并**；关联 PR #189494 截至核对时仍开放，不能视为修复已经进入主分支。
+- **链接**：[Issue #189440](https://github.com/openclaw/openclaw/issues/189440) · [PR #189497（重复关闭，未合并）](https://github.com/openclaw/openclaw/pull/189497) · [关联 PR #189494（开放中）](https://github.com/openclaw/openclaw/pull/189494)
