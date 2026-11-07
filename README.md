@@ -19,10 +19,10 @@
 
 ### 👋 关于我
 
-软件工程专业本科在读（2027 届），主要方向为 AI Agent 研发与全栈开发。
+软件工程师，核心方向为 AI Agent 系统研发与全栈开发。
 
-- 关注 LangGraph 状态编排、Model Context Protocol（MCP）工具生态与 RAG 检索优化，注重将技术方案落地为可运行的系统
-- 具备一年以上企业实习经历，参与多租户 SaaS、支付对接等业务系统的开发与交付
+- 关注 LangGraph 状态编排、Model Context Protocol（MCP）工具生态与 RAG 检索优化，注重将技术方案落地为可运行的生产系统
+- 具备一年以上企业级商业项目研发与交付经验，参与多租户 SaaS、支付对接等核心业务系统开发
 - 持续在 [个人笔记](https://notes.power8.top/) 中整理技术学习与项目复盘
 
 ---
@@ -33,7 +33,7 @@
 - **CloudCLI** — 基于 Claude Agent SDK 的跨端编程助手，支持 Web 与 Electron，并接入自研 MCP 服务
 - **[Jie's Notes](https://github.com/KissFeng/Jie-s-Notes)** — 基于 VitePress 构建的个人技术笔记站
 
-此外还包括若干实习及外包项目（代码未公开），详见 👉 [项目详情](./docs/projects.md)
+此外还包括若干商业交付及外包项目（代码未公开），详见 👉 [项目详情](./docs/projects.md)
 
 ---
 
