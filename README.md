@@ -13,6 +13,10 @@
   <a href="mailto:kissfeng66@gmail.com"><img src="https://img.shields.io/badge/Email-kissfeng66%40gmail.com-0a0e17?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
+<p align="center">
+  <strong>简体中文</strong> · <a href="./README.en.md">English</a>
+</p>
+
 </div>
 
 ---
@@ -29,8 +33,9 @@
 
 ### 🛠️ 项目
 
-- **NexusAgent** — 基于 LangGraph 的多智能体协作平台，实现了状态持久化、人工审批中断与混合检索
-- **CloudCLI** — 基于 Claude Agent SDK 的跨端编程助手，支持 Web 与 Electron，并接入自研 MCP 服务
+- **[Git Workbench](https://github.com/KissFeng/git-workbench)** — 面向 Codex 桌面端与 Antigravity 2.0 的本地 Git 工作台（MCP Apps），零 npm 依赖支持差异审查、分段暂存及分支 / Worktree 管理
+- **NexusAgent**（私有仓库）— 基于 LangGraph 的多智能体协作平台，实现了状态持久化、人工审批中断与混合检索
+- **CloudCLI**（私有仓库）— 基于 Claude Agent SDK 的跨端编程助手，支持 Web 与 Electron，并接入自研 MCP 服务
 - **[Jie's Notes](https://github.com/KissFeng/Jie-s-Notes)** — 基于 VitePress 构建的个人技术笔记站
 
 此外还包括若干商业交付及外包项目（代码未公开），详见 👉 [项目详情](./docs/projects.md)
@@ -39,7 +44,7 @@
 
 ### 🌱 开源贡献
 
-曾向 MCP 官方仓库、Dify、CodeGraph、Hermes Agent 等项目提交缺陷修复与改进，详见 👉 [贡献记录](./docs/contributions.md)
+持续向开源社区提交缺陷修复与工程改进，目前已累计 **10 条本人 PR 直接合并**、**3 项方案被上游采纳**，涵盖 **MCP 官方仓库、Dify、T3 Code、Pydash、Mechanize、Hermes Agent、CodeGraph** 等项目，详见 👉 [贡献记录](./docs/contributions.md)
 
 ---
 
@@ -64,8 +69,8 @@
 | | |
 | :--- | :--- |
 | **AI** | ![][ai-langgraph] ![][ai-claude] ![][ai-mcp] ![][ai-qdrant] ![][ai-pytorch] ![][ai-openai] |
-| **后端** | ![][backend-python] ![][backend-fastapi] ![][backend-java] ![][backend-spring] ![][backend-redis] ![][backend-mysql] ![][backend-rabbitmq] |
-| **前端** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-ts] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
+| **后端** | ![][backend-python] ![][backend-fastapi] ![][backend-node] ![][backend-java] ![][backend-spring] ![][backend-redis] ![][backend-mysql] ![][backend-sqlite] ![][backend-rabbitmq] |
+| **前端** | ![][frontend-react] ![][frontend-nextjs] ![][frontend-vue] ![][frontend-ts] ![][frontend-tailwind] ![][frontend-electron] ![][frontend-vite] |
 | **运维** | ![][ops-docker] ![][ops-linux] ![][ops-nginx] ![][ops-actions] ![][ops-vercel] |
 
 <!-- Tech Stack Badges (Uniform 0a0e17 Dark Slate Theme) -->
@@ -78,14 +83,17 @@
 
 [backend-python]: https://img.shields.io/badge/Python-0a0e17?style=flat-square&logo=python&logoColor=white
 [backend-fastapi]: https://img.shields.io/badge/FastAPI-0a0e17?style=flat-square&logo=fastapi&logoColor=059669
+[backend-node]: https://img.shields.io/badge/Node.js-0a0e17?style=flat-square&logo=nodedotjs&logoColor=5fa04e
 [backend-java]: https://img.shields.io/badge/Java_17+-0a0e17?style=flat-square&logo=openjdk&logoColor=white
 [backend-spring]: https://img.shields.io/badge/Spring_Boot_3-0a0e17?style=flat-square&logo=springboot&logoColor=6db33f
 [backend-redis]: https://img.shields.io/badge/Redis-0a0e17?style=flat-square&logo=redis&logoColor=dc2626
 [backend-mysql]: https://img.shields.io/badge/MySQL-0a0e17?style=flat-square&logo=mysql&logoColor=white
+[backend-sqlite]: https://img.shields.io/badge/SQLite-0a0e17?style=flat-square&logo=sqlite&logoColor=38bdf8
 [backend-rabbitmq]: https://img.shields.io/badge/RabbitMQ-0a0e17?style=flat-square&logo=rabbitmq&logoColor=ff6600
 
 [frontend-react]: https://img.shields.io/badge/React_19-0a0e17?style=flat-square&logo=react&logoColor=61dafb
 [frontend-nextjs]: https://img.shields.io/badge/Next.js-0a0e17?style=flat-square&logo=nextdotjs&logoColor=white
+[frontend-vue]: https://img.shields.io/badge/Vue_3-0a0e17?style=flat-square&logo=vuedotjs&logoColor=4fc08d
 [frontend-ts]: https://img.shields.io/badge/TypeScript-0a0e17?style=flat-square&logo=typescript&logoColor=3178c6
 [frontend-tailwind]: https://img.shields.io/badge/TailwindCSS-0a0e17?style=flat-square&logo=tailwindcss&logoColor=38bdf8
 [frontend-electron]: https://img.shields.io/badge/Electron-0a0e17?style=flat-square&logo=electron&logoColor=47848f

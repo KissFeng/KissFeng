@@ -6,9 +6,25 @@
 
 ## 个人项目
 
+### Git Workbench
+
+> 面向 Codex 桌面端与 Antigravity 2.0 的本地 Git 工作台 · 开源项目 · 2026.11
+
+在 AI 编程助手的对话界面旁直接完成 Git 审查与操作，无需频繁切回命令行。
+
+- **MCP Apps 集成**：基于 Node.js 24+ 与 MCP Apps 协议构建，零外部 npm 运行时依赖；在 Codex 桌面端面板与 Antigravity 2.0 右侧辅助栏中原生嵌合，自动追踪当前会话工作区并跟随宿主浅色 / 深色主题
+- **Git 工作流操作**：支持查看文件 Diff、分段暂存更改（Stage）、查看与管理提交历史，以及切换分支和 Git Worktree
+- **跨平台一键安装**：提供自动识别本机 Codex / Antigravity 环境的 `install.sh`（macOS / Linux）与 `install.ps1`（Windows PowerShell）安装脚本
+
+**技术栈**：Node.js、JavaScript (ESM)、MCP Apps、Git
+
+[源码](https://github.com/KissFeng/git-workbench) · [Release v0.9.0](https://github.com/KissFeng/git-workbench/releases/tag/v0.9.0)
+
+---
+
 ### NexusAgent
 
-> 基于 LangGraph 的多智能体协作平台 · 独立开发 · 2026.08 – 2026.10
+> 基于 LangGraph 的多智能体协作平台 · 独立开发（私有仓库）· 2026.08 – 2026.10
 
 传统 ReAct 循环在多步骤、多工具任务中执行过程不透明，且难以在中途进行人工干预。本项目以显式状态编排为核心，提升 Agent 执行过程的可控性与可追溯性。
 
@@ -23,7 +39,7 @@
 
 ### CloudCLI（灵犀）
 
-> 基于 Claude Agent SDK 的跨端编程助手 · 2026.05 – 2026.10
+> 基于 Claude Agent SDK 的跨端编程助手（私有仓库）· 2026.05 – 2026.10
 
 将命令行形态的 AI 编程助手扩展至 Web 与桌面端，并支持接入自研工具服务。
 
